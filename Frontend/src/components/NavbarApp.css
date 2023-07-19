@@ -1,0 +1,15 @@
+.nav__link{
+    color: darkslategray;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.nav__link:hover{
+    color:black;
+}
+
+.nav__link1{
+    color: blue;
+    text-decoration: none;
+    font-weight:bold ;
+}
