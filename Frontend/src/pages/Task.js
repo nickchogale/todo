@@ -12,7 +12,7 @@ const Task = () => {
   const [error, setError] = useState();
 
   //const [data, setData] = useState([]);
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(6);
   const [pageCount, setPageCount] = useState(1);
   const currentPage = useRef();
 

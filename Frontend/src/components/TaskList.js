@@ -4,17 +4,17 @@ import "./taskList.css";
 
 const TaskList = props => {
     return (
-        <div className="tasklist-css">
-        {props.tasks.map(task => (
-            <TaskItem
-             key={task._id}
-             id={task._id}
-             title={task.title}
-             status={task.status}
-            />
+      <div className="tasklist-css grid-container">
+        {props.tasks.map((task) => (
+          <TaskItem
+            key={task._id}
+            id={task._id}
+            title={task.title}
+            status={task.status}
+          />
         ))}
-        </div>
-    )
+      </div>
+    );
 };
 
 export default TaskList;
