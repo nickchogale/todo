@@ -48,7 +48,7 @@ const Task = () => {
   // const s = async () => {
     // try {
     //   const response = await axios.get(
-    //     `http://localhost:5000/api/tasks/user/${userid}`
+    //     `${process.env.REACT_APP_BACKEND_URL}/api/tasks/user/${userid}`
     //   );
 
     //   setTask(response.data.tasks);
@@ -79,7 +79,7 @@ const Task = () => {
     const getPaginatedTasks = async () => {
          try {
       const response = await axios.get(
-        `http://localhost:5000/api/tasks/user/${userid}/paginatedtask?page=${currentPage.current}&limit=${limit}`
+        `${process.env.REACT_APP_BACKEND_URL}/api/tasks/user/${userid}/paginatedtask?page=${currentPage.current}&limit=${limit}`
       );
 
       setPageCount(response.data.pageCount);
@@ -93,7 +93,7 @@ const Task = () => {
 
 
       // fetch(
-      //   `http://localhost:5000/paginatedUsers?page=${currentPage.current}&limit=${limit}`,
+      //   `${process.env.REACT_APP_BACKEND_URL}/paginatedUsers?page=${currentPage.current}&limit=${limit}`,
       //   {
       //     method: "GET",
       //   }

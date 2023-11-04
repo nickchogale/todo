@@ -17,7 +17,7 @@ const AddTask = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const result = await axios.post("http://localhost:5000/api/tasks/", {
+        const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/`, {
           title, 
           status,
           uid: localStorage.getItem("userID")

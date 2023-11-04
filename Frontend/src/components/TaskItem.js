@@ -18,7 +18,7 @@ const TaskItem = (props) => {
   const deleteHandle = async (id) => {
     console.log(id);
     try {
-      response = await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+      response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`);
 
       console.log(response.data.message);
       //this.setState({ state: this.state });

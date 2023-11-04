@@ -25,7 +25,7 @@ const UpdatePage = () => {
           try {
             console.log(id);
             const res = await axios.get(
-              `http://localhost:5000/api/tasks/${id}`
+              `${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`
             );
             console.log(res);
 
@@ -46,7 +46,7 @@ const UpdatePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.patch(`http://localhost:5000/api/tasks/${id}`, {
+      const result = await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`, {
         title: values.title,
         status: values.status
       });
