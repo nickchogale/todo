@@ -181,9 +181,7 @@ const paginateTask = async (req, res) => {
     }
 
     if (!allTasks || allTasks.length === 0) {
-      return next(
-        new HttpError("Could not find a tasks for provided user id", 404)
-      );
+      return
     }
 
     const page = parseInt(req.query.page);
